@@ -1,0 +1,86 @@
+body {
+    font-size: 3rem;
+    
+}
+
+.container {
+    background-color: gray;
+
+    width: 500px;
+    height: 500px;
+}
+
+.text1::before {
+    content: "GRAY"
+}
+
+@media screen and (min-width: 768px) {
+    .text1::before {
+        content: "Green";
+    }
+
+    .container {
+        background-color: green;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .text1::before {
+        content: "Blue";
+    }
+
+    .container {
+        background-color: blue;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .text1::before {
+        content: "Red";
+    }
+
+    .container {
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .text1::before {
+        content: "Violet";
+    }
+
+    .container {
+        background-color: violet;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    .text1::before {
+        content: "blueviolet";
+    }
+
+    .container {
+        background-color: blueviolet;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .text1::before {
+        content: "Violet";
+    }
+
+    .container {
+        background-color: violet;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .text1::before {
+        color: white;
+        content: "Black";
+    }
+
+    .container {
+        background-color: black;
+    }
+}
