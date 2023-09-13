@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usando Forms e CSS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <form class="form">
+      <section>
+        <fieldset>
+          <legend>Informações do aluno</legend>
+
+          <label for="name">Nome completo:</label>
+          <input type="text" class="name" name="name" required size="50" maxlength="50" autofocus>
+
+          <br>
+          <br>
+
+          <label for="email">E-mail:</label>
+          <input type="text" class="email" name="email" required>
+
+          <br>
+          <br>
+
+          <label for="turma">Turma:</label>
+          <input type="radio" class="turma1" name="turma" checked required>
+          <input type="radio" class="turma2" name="turma" required>
+
+          <br>
+          <br>
+
+          <label for="disciplinas">Disciplinas:</label>
+
+          <input type="checkbox" name="disciplinas" class="pweb" value="PWEB">
+          <label for="pweb">PWEB</label>
+
+          <input type="checkbox" name="disciplinas" class="es2" value="ES2">
+          <label for="es2">Eng. Software 2</label>
+
+          <input type="checkbox" name="disciplinas" class="lbd" value="LBD">
+          <label for="LBD">LBD</label>
+
+          <br><br>
+
+          <input type="submit" value="Enviar">
+          <button type="reset">Limpar</button>
+        </fieldset>
+
+        <br><br>
+
+        <fieldset>
+          <legend>Fieldset Maluco</legend>
+
+          <textarea name="mensagem" class="mensagem" cols="90" rows="5"></textarea>
+
+          <br><br>
+
+          <label for="cidade">Cidade</label>
+          <select name="cidade" class="cidade">
+            <option value="">Selecione</option>
+            <option value="sorocaba">Sorocaba</option>
+            <option value="Votorantim">Votorantim</option>
+            <option value="Itú">Itú</option>
+          </select>
+
+          <button type="button">Cancelar</button>
+        </fieldset>
+      </section>
+    </form>
+  </main>
+
+  <footer class="rodape">
+    <p>Página criada na aula de PWEB. Direitos reservados 2023.</p>
+  </footer>
+</body>
+
+</html>
