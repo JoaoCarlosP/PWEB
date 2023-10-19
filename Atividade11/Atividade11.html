@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Forma 1
+        var aluno1 = new Object()
+        aluno1.ra = "00001234",
+        aluno1.nome = "João"
+
+        "ra = " + aluno1.ra + " nome: " + aluno1.nome
+        alert("ra = " + aluno1.ra + " nome: " + aluno1.nome)
+        
+        // Form 2 usando {}
+        var aluno2 = {}
+        aluno2.ra = "1234",
+        aluno2["nome"] = "Luquinhas"
+        
+        "ra = " + aluno2.ra + " nome: " + aluno2.nome
+        alert("ra = " + aluno2.ra + " nome: " + aluno2.nome)
+        
+        // Forma 3 Literal
+        var aluno3 = {
+            ra: "1234567",
+            nome: "Gabriel"
+        }
+        alert("ra = " + aluno3.ra + " nome: " + aluno3.nome)
+
+        // Forma 4 Usando função construtora
+        function Aluno(ra, nome) {
+            this.ra = ra
+            this.nome = nome
+
+            this.MostraDados = function () {
+                const aluno4 = "ra = " + this.ra + " nome: " + this.nome
+                return aluno4
+            }
+        }
+        const aluno4 = new Aluno("0987654321", "Danielzinho")
+        alert(aluno4.MostraDados())
+
+        // Forma 5
+        var aluno5 = {}
+        var nome_propriedade = "ra"
+        aluno5[nome_propriedade] = "1234566778899090876543"
+        aluno5['nome'] = "Vitor"
+        alert("ra = " + aluno5.ra + " nome: " + aluno5.nome)
+
+        function Aluno2 () {
+            var ra
+            var nome
+
+            this.setRa = (value) => {
+                this.ra = value
+            }
+
+            this.getRa = () => {
+                return this.ra
+            }
+
+            this.setNome = (value) => {
+                this.nome = value
+            }
+
+            this.getNome = () => {
+                return this.nome
+            }
+        }
+        const aluno6 = new Aluno2()
+        aluno6.setNome('Rogérin')
+        aluno6.setRa('8372178232102')
+        alert("ra = " + aluno6.getRa() + " nome: " + aluno6.getNome())
+    </script>    
+</body>
+</html>
