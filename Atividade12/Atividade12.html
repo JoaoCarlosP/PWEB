@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Triângulo
+        function Retangulo(x, y) {
+            this.x = x
+            this.y = y
+
+            this.Calcular = function () {
+                const calculo = (x * y)
+                return calculo + " m²"
+            }
+        }
+        const areaRetangulo = new Retangulo(10, 30)
+        alert(areaRetangulo.Calcular())
+
+        function Conta () {
+            var nomeCorrentista
+            var banco
+            var numConta
+            var saldo
+
+            this.getNomeCorrentista = function () {
+                return this.nomeCorrentista
+            }
+
+            this.setNomeCorrentista = function (nome) {
+                this.nomeCorrentista = nome
+            }
+
+            this.getBanco = function () {
+                return this.banco
+            }
+
+            this.setBanco = function (banco) {
+                this.banco = banco
+            }
+
+            this.getNumConta = function () {
+                return numConta
+            }
+
+            this.setNumConta = function (num) {
+                this.numConta = num
+            }
+
+            this.getSaldo = function() {
+                return this.saldo
+            }
+
+            this.setSaldo = function (saldo) {
+                this.saldo = saldo
+            }
+        }
+
+        function Corrente() {
+            var saldoEspecial
+
+            this.getSaldoEspecial = function () {
+                return this.saldoEspecial
+            }
+
+            this.setSaldoEspecial = function (saldo) {
+                this.saldoEspecial = saldo
+            }
+        }
+
+        function Poupanca () {
+                var juros
+                var dataVencimento
+
+            this.getJuros = function () {
+                return this.juros
+            }
+
+            this.setJuros = function (valor) {
+                this.juros = valor
+            }
+
+            this.getDataVencimento= function  () {
+                return this.dataVencimento
+            }
+
+            this.setDataVencimento = function (data) {
+                this.dataVencimento = data
+            }
+        }
+
+        Corrente.prototype = new Conta()
+        Poupanca.prototype = new Conta()
+
+        var conta = new Conta()
+        conta.setNomeCorrentista("João")
+        conta.setBanco("Santander")
+        conta.setNumConta("123456789")
+        conta.setSaldo("R$ 0,50")
+
+        
+
+        var corrente = new Corrente()
+        corrente.setSaldoEspecial("R$ 1000,00")
+
+        var poupanca = new Poupanca()
+        poupanca.setJuros("10%")
+        poupanca.setDataVencimento("10/10/2023")
+        console.log(corrente.getBanco())
+        alert(
+            "Saldo Especial: " + corrente.getSaldoEspecial() + "\n" +
+            "Juros da Poupança: " + poupanca.getJuros() + "\n" +
+            "Data de Vencimento: " + poupanca.getDataVencimento()
+            )
+    </script>    
+</body>
+</html>
